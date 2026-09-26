@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guilherme Design — Cartão Digital</title>
+  <meta name="description" content="Cartão de visitas digital de Guilherme Felix, Designer Gráfico em Luanda, Angola. Logotipos, identidade visual, social media e mais." />
+  <meta property="og:title" content="Guilherme Felix — Designer Gráfico" />
+  <meta property="og:description" content="Cartão de visitas digital. Fale comigo pelo WhatsApp: +244 933 260 961." />
+  <meta property="og:type" content="profile" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --white: #ffffff;
+      --black: #0a0a0a;
+      --black-soft: #161616;
+      --blue: #2563eb;
+      --blue-light: #3b82f6;
+      --blue-dark: #1d4ed8;
+      --blue-glow: rgba(37,99,235,0.18);
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --r-md: 12px; --r-lg: 20px; --r-xl: 32px; --r-full: 9999px;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-body);
+      background: var(--black);
+      color: var(--white);
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(circle at 50% -10%, var(--blue-glow), transparent 55%),
+        radial-gradient(circle at 85% 100%, rgba(37,99,235,0.08), transparent 50%);
+      pointer-events: none;
+    }
+    .cartao {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      background: var(--black-soft);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--r-xl);
+      padding: 40px 28px 32px;
+      text-align: center;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.55);
+      z-index: 1;
+    }
+    .cartao-tag {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 116px; height: 116px;
+      margin: 0 auto 18px;
+      padding: 4px;
+      border-radius: var(--r-xl);
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      box-shadow: 0 12px 32px rgba(37,99,235,0.35);
+    }
+    .avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: calc(var(--r-xl) - 4px);
+      display: block;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    h1 span { color: var(--blue-light); }
+    .role {
+      margin-top: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--white);
+    }
+    .local {
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: var(--gray-400);
+    }
+    .resumo {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      color: var(--gray-400);
+    }
+    .acoes { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: var(--r-full);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primario { background: var(--blue); color: var(--white); box-shadow: 0 10px 24px rgba(37,99,235,0.35); }
+    .btn-primario:hover { background: var(--blue-dark); }
+    .btn-secundario { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.18); }
+    .btn-secundario:hover { border-color: var(--blue-light); color: var(--blue-light); }
+    .btn-site {
+      margin-top: 2px;
+      font-size: 0.88rem;
+      color: var(--blue-light);
+      border: 1.5px dashed rgba(59,130,246,0.45);
+    }
+    .icones { margin-top: 22px; display: flex; justify-content: center; gap: 12px; }
+    .icone {
+      width: 44px; height: 44px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: var(--r-full);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .icone:hover { border-color: var(--blue-light); color: var(--blue-light); transform: translateY(-2px); }
+    .icone svg { width: 20px; height: 20px; fill: currentColor; }
+    .rodape {
+      margin-top: 24px;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 380px) {
+      .cartao { padding: 32px 20px 26px; }
+      h1 { font-size: 1.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .btn, .icone { transition: none; }
+      .btn:hover, .icone:hover { transform: none; }
+    }
+  </style>
+</head>
+<link rel="icon" type="image/png" href="imagens/logo web.png">
+<body>
+  <main class="cartao">
+    <p class="cartao-tag">Cartão Digital</p>
+    <div class="avatar">
+      <img src="./imagens/Frame nji1171277582.jpg" alt="Guilherme Felix" />
+    </div>
+    <h1>Guilherme <span>Felix</span></h1>
+    <p class="role">Designer Gráfico</p>
+    <p class="local">Luanda, Angola · +244</p>
+    <p class="resumo">Logotipos, identidade visual, social media, flyers, banners e cartões de visita para o seu negócio.</p>
+
+    <div class="acoes">
+      <a class="btn btn-primario" href="https://wa.me/244933260961" target="_blank" rel="noopener">
+        Falar no WhatsApp
+      </a>
+      <a class="btn btn-secundario" href="mailto:guilhermefelix993@gmail.com">
+        Enviar E-mail
+      </a>
+      <a class="btn btn-site" href="https://guilherme1917.github.io/DESIGN-STUDIO-577/" target="_blank" rel="noopener">
+        Ver o meu site ↗
+      </a>
+    </div>
+
+    <div class="icones">
+      <a class="icone" href="https://wa.me/244933260961" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.05-.52-.099-.148-.669-1.612-.916-2.207-.242-.579-.487-.487-.669-.497l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <a class="icone" href="https://instagram.com/designer_577" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a class="icone" href="mailto:guilhermefelix993@gmail.com" aria-label="E-mail">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4.236l-8 4.882-8-4.882V6.4l8 4.882 8-4.882v1.836z"/></svg>
+      </a>
+    </div>
+
+    <p class="rodape">DESIGN.STUDIO 577</p>
+  </main>
+</body>
+</html>
